@@ -14,7 +14,7 @@ st.set_page_config(
 )
 
 # Load the model
-model = load_model('/home/codename/projects/learning/ds n ml/models/cat_dog_classification_v2.0/models/dog_cat_classifier.h5')
+model = load_model(os.path.join('models', 'dog_cat_classifier.h5'))
 
 # Set a stylish header
 st.markdown("<h1 style='text-align: center; color: #4CAF50;'>Cat vs Dog Classifier 🐱🐶</h1>", unsafe_allow_html=True)
