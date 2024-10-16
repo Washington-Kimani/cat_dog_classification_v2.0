@@ -14,7 +14,14 @@ st.set_page_config(
 )
 
 # Load the model
-model = load_model(os.path.join('models', 'dog_cat_classifier.h5'))
+# Get the absolute path of the current file
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Build the absolute path to the model file
+model_path = os.path.join(current_dir, 'models', 'dog_cat_classifier.h5')
+
+# load model
+model = load_model(model_path)
 
 # Set a stylish header
 st.markdown("<h1 style='text-align: center; color: #4CAF50;'>Cat vs Dog Classifier 🐱🐶</h1>", unsafe_allow_html=True)
